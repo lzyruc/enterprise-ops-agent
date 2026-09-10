@@ -1,0 +1,7 @@
+{"id":"policy_p1","message":"P1 工单需要什么审批？","expected_status":"completed","expected_tool":"search_policy","answer_contains":"P1"}
+{"id":"create_p1","message":"查询制度并创建 P1 工单：支付 API 全部超时","expected_status":"waiting_approval","expected_tool":"search_policy","approval_required":true}
+{"id":"create_p2","message":"创建 P2 工单：订单接口部分超时","expected_status":"completed","expected_tool":"create_ticket","approval_required":false}
+{"id":"expense_policy","message":"差旅报销超过 5000 元有什么规定？","expected_status":"completed","expected_tool":"search_policy","answer_contains":"5000"}
+{"id":"runbook","message":"API 延迟超过 2 秒怎么排查？","expected_status":"completed","expected_tool":"search_docs","answer_contains":"延迟"}
+{"id":"my_tickets","message":"查询我的工单列表","expected_status":"completed","expected_tool":"list_tickets"}
+

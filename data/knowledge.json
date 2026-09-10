@@ -1,0 +1,30 @@
+[
+  {
+    "id": "policy-p1-approval",
+    "kind": "policy",
+    "title": "P1 紧急工单审批规范",
+    "tags": "P1,审批,工单,生产事故",
+    "content": "P1 工单用于造成核心服务不可用、严重数据风险或大范围客户影响的事件。创建前需确认影响范围、业务负责人和回滚方案。P1 工单创建属于高风险写操作，必须由 manager 或 admin 人工批准；批准后进入 OPEN 状态并通知值班负责人。"
+  },
+  {
+    "id": "policy-ticket-lifecycle",
+    "kind": "policy",
+    "title": "工单生命周期",
+    "tags": "工单,状态,SLA",
+    "content": "工单状态依次为 OPEN、IN_PROGRESS、RESOLVED、CLOSED。P1 首次响应 SLA 为 10 分钟，P2 为 30 分钟，P3 为 4 小时，P4 为 1 个工作日。只有 manager 或 admin 可以关闭他人创建的工单。"
+  },
+  {
+    "id": "handbook-expense",
+    "kind": "policy",
+    "title": "差旅与费用报销",
+    "tags": "报销,差旅,费用",
+    "content": "单笔差旅费用超过 5000 元须在出发前由直属经理审批。报销应在行程结束后 30 天内提交，并附合法票据与行程证明。"
+  },
+  {
+    "id": "runbook-api-latency",
+    "kind": "runbook",
+    "title": "API 延迟故障处理手册",
+    "tags": "API,延迟,故障,P1",
+    "content": "当 API P95 延迟连续 5 分钟超过 2 秒时，先检查网关错误率、数据库连接池和最近发布记录。大面积不可用时回滚最近版本并创建 P1 工单。"
+  }
+]
